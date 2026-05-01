@@ -1,0 +1,167 @@
+
+.prices-desktop-header {
+  display: none;
+}
+
+.prices-card {
+  width: 260px;
+  height: 200px;
+  gap: 15px;
+  padding: 10px 10px 20px;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.label-mobile {color: gray;}
+
+.prices-slider {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.order-container {
+  position: relative;
+  display: flex;
+}
+
+.services-column, .prices-column, .deadline-column {
+  height: 32px;
+  gap: 25px;
+}
+
+.deadline-column {
+  display: inline-block;
+  width: 50%;
+}
+
+.order-details {
+align-self: flex-end;
+margin-top: -45px;
+margin-left: auto;
+display: flex;
+border: none;
+background: transparent;
+cursor: pointer;
+}
+
+.order-icon {
+  top: 0;
+  left: 0;
+  width: 119px;
+  height: 32px;
+  border: none;
+}
+.vat-info, .proposal {
+  margin: 0 20px;
+  padding: 20px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.web-footer {
+  color: gray;
+  margin: 40px 60px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+@media (min-width: 1024px) {
+
+
+  .label-mobile {
+    display: none;
+  }
+
+  .prices-desktop-header {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr 1.5fr 140px;
+    color: #7e7e7e;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 15px 35px;
+  }
+
+  .prices-slider .swiper-wrapper {
+    flex-direction: column !important;
+    display: block; 
+    transform: none;
+    gap: 0;
+  }
+
+  .prices-card {
+    display: grid !important;
+    grid-template-columns: 3fr 1.5fr 1.5fr 140px;
+    width: 100% !important; 
+    height: auto;
+    min-height: 64px;
+    background: white;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 35px;
+    font-size: 14px;
+    border-radius: 0;
+    color: black;
+    line-height: 18px;
+    font-weight: 400;
+    align-items: center;
+    justify-self: center;
+    text-align: left;
+  }
+
+  .pagination-prices {
+    display:none;
+  }
+
+  .services-column br,
+  .prices-column br,
+  .term-info br {
+    display: none;
+  }
+
+
+  .prices-card:first-child { border-radius: 8px 8px 0 0; }
+  .prices-card:last-child { border-radius: 0 0 8px 8px; border-bottom: none; }
+
+
+.vat-info {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.proposal {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.web-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.copyright {
+  justify-content: flex-start;
+}
+
+.disclaimer {
+  justify-content: flex-end;
+}
+
+
+}

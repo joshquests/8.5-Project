@@ -1,0 +1,185 @@
+
+.left-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px; 
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  display: block !important; 
+  transform: translateX(-100%); 
+  transition: transform 0.3s ease-in-out;
+}
+
+.left-sidebar.is-open {
+    transform: translateX(0);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+.left-sidebar {
+  display: none;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.website-logo {
+  margin-right: 3.5rem;
+}
+
+.menu-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-btn img {
+  height: 32px;
+  width: auto;
+}
+
+.menu-btn:hover,
+.menu-btn:focus,
+.menu-btn:active {
+  transform: scale(1.25);
+}
+
+.side-menu-header {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  border: none;
+}
+
+.side-menu-nav {
+  display: flex;
+  padding-left: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 2rem;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-side {
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  background: none;
+  flex-direction: flex-start;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.btn-side:active,
+.btn-side:hover,
+.active-mobile {
+  color: gray;
+  border-left: 7px solid aquamarine;
+  margin-left: -20px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.side-menu-footer {
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.footer-buttons {
+  display: flex;
+  width: 100%;
+  border: none;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.email-us {
+  margin-bottom: 1rem;
+  font-style: normal;
+}
+
+.email-us a {
+  text-decoration: none;
+  color: black;
+}
+
+.language-options {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.btn-language {
+  font-size: 0.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-language:hover {
+  transform: scale(1.25);
+  cursor: pointer;
+}
+
+.telephone-number {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1023px) {
+  .left-sidebar aside {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 320px; 
+    height: 100%;
+    background-color: white;
+    z-index: 1000; 
+    box-shadow: none;
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out;
+    display: block; 
+    border: none;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .left-sidebar {
+    position: relative; 
+    transform: translateX(0); 
+    width: fit-content;
+    height: 100vh;
+    display: block !important;
+    z-index: 1;
+    border: none;
+    box-shadow: none;
+  }
+
+  .equipment-repair {
+    text-shadow: none;
+    border-left: none;
+    color: black; 
+  }
+
+  .container {box-shadow: none;
+  border: none}
+}

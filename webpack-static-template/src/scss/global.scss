@@ -1,0 +1,42 @@
+$bgColor: white;
+$text: black;
+
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Regular.woff") format("woff"); 
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  max-width: 100%; 
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $bgColor;
+  color: $text;
+  font-family: "TTLakes", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    flex-grow: 1;       
+    width: 0;         
+    min-width: 0;         
+    background-color: #f8f8f8; 
+  }
+}

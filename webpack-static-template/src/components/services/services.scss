@@ -1,0 +1,391 @@
+
+main {
+  color: #2a2a2a;
+  font-family: "TTLakes", sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.webpage {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.menu-mobile {
+  display: flex;
+  background-color: white;
+  gap: 1.5rem;
+}
+
+.menu-btn {
+  border: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  background-color: white;
+}
+
+.menu-btn img {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  background-color: white;
+}
+
+.divider-mobile {
+  height: 3rem;
+  background-color: rgb(212, 211, 211);
+  width: 1px;
+  margin: 0 1rem;
+}
+
+.menu-mobile > .divider-mobile:first-of-type {
+  display: none;
+}
+
+.website-logo {
+  max-width: max-content;
+  flex-shrink: 0;
+}
+
+.menu-right {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+.menu-right > :nth-child(-n + 4) {
+  display: none;
+}
+
+.main-content {
+  background-color: #f8f8f8;
+}
+
+.page-title {
+  padding-top: 1.75rem;
+}
+
+.page-title h1 {
+  width: 19rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  border-left: 10px solid #00c8c8;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: nowrap;
+  font-size: clamp(2.3rem, 4vw, 2rem);
+  font-weight: 700;
+}
+
+.page-title-desktop {
+  display: none;
+}
+
+.services-support {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.navigation-slider {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-slider .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    gap: 0;
+}
+
+.navigation-slider .swiper-slide {
+    width: auto;
+}
+
+.show-all-icon, .read-more-btn img {
+  transition: transform 0.3s ease;
+}
+
+.btn {
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 5rem 0.5rem 1rem;
+  background: none;
+  color: gray;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 2px solid #00c8c8;
+  background-color: white;
+  scroll-margin-inline: 1rem;
+}
+
+.btn.active {
+  background-color: white;
+  border: 2px solid #00c8c8;
+}
+
+.services-support::-webkit-scrollbar {
+  display: none;
+}
+
+.main-article {
+  padding-left: 1rem;
+  padding-right: 1.1rem;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.continued-article {
+  display: none;
+}
+
+.continued-article.is-expanded {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1.1rem;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.article-desktop {
+  display: none;
+}
+
+.read-more-btn {
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  border: none;
+  gap: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.read-more-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.article-image {
+  width: 100%;
+  margin-top: 1rem;
+  object-fit: contain;
+  margin-bottom: 2rem;
+}
+
+
+@media (min-width: 1024px) {
+.active-desktop {
+  color: gray;
+  border-left: 7px solid aquamarine;
+  margin-left: -20px;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+  main {
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  header {
+    display: none;
+  }
+
+  .main-content {
+    background-color: #f8f8f8;
+  }
+
+  .page-title {
+    display: none;
+  }
+
+  .page-title-desktop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .page-title-desktop h1,
+  .menu-desktop {
+    width: 50%;
+    flex: 1;
+  }
+
+  .page-title-desktop h1 {
+    padding-left: 1rem;
+    border-left: 7px solid #00c8c8;
+    text-align: left;
+    align-items: center;
+    word-wrap: break-word;
+    white-space: nowrap;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .menu-desktop {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu-btn-repair-status,
+  .menu-btn-search {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    background: none;
+    height: 1.5rem;
+  }
+
+  .menu-btn-repair-status img,
+  .menu-btn-search img {
+    margin-left: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .menu-btn-repair-status img:hover,
+  .menu-btn-search img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+.nav-slider {
+  justify-content: space-between;
+  gap: 25px;
+  width: 100%;
+  display: grid !important;
+  grid-template-columns: repeat(5, auto); 
+}
+
+  .services-support text {
+    padding-left: 25px;
+  }
+
+  .btn:hover,
+  .btn:active,
+  .btn:focus,
+  .btn.brands-we-repair.active {
+    border: 2px solid #00c8c8;
+    background-color: white;
+  }
+
+  .article-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .left-pane,
+  .right-pane {
+    width: 50%;
+  }
+
+  .left-pane {
+    flex: 1;
+    max-width: 1400px;
+    max-height: 1000px;
+  }
+
+  .main-article,
+  .article-desktop {
+    padding-top: 2rem;
+    padding-left: 1.75rem;
+    padding-right: 1rem;
+    line-height: 1.25rem;
+    font-size: 1.25rem;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    color: #444;
+  }
+
+  .continued-article {
+    visibility: hidden;
+  }
+
+  .article-desktop {
+    display: block;
+  }
+
+  .read-more-option {
+    display: none;
+  }
+
+  .read-more-btn {
+    padding-left: 1.75rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .read-more-btn img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+  }
+
+  .right-pane {
+    width: 50%;
+    overflow: hidden;
+  }
+
+  .article-image {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
