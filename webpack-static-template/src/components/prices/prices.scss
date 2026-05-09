@@ -5,9 +5,10 @@
 
 .prices-card {
   width: 260px;
-  height: 200px;
+  height: auto;
   gap: 15px;
-  padding: 10px 10px 20px;
+  min-height: 160px;
+  padding: 16px;
   background: #ffffff;
   border: 1px solid #eaeaea;
   border-radius: 8px;
@@ -15,7 +16,9 @@
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
+  justify-content: space-between;
 }
+
 
 .label-mobile {color: gray;}
 
@@ -45,31 +48,74 @@
 
 .order-details {
 align-self: flex-end;
-margin-top: -45px;
+margin-top: 10px;
 margin-left: auto;
 display: flex;
 border: none;
 background: transparent;
 cursor: pointer;
+padding: 0;
 }
 
 .order-icon {
   top: 0;
   left: 0;
-  width: 119px;
+  width: auto;
   height: 32px;
-  border: none;
+  object-fit: contain;
 }
-.vat-info, .proposal {
+
+.vat-info {
   margin: 0 20px;
   padding: 20px;
   line-height: 24px;
   font-size: 16px;
 }
 
+.proposal {
+  display: flex;
+  flex-direction: column;   
+  align-items: flex-start;     
+  justify-content: center;  
+  gap: 12px;                
+  padding-left: 20px;
+  margin: 0 20px;
+}
+.proposal strong {
+  display: block; /* Allows children to stack */
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.proposal-button-group {
+  display: flex;      /* Keeps 'proposal' and the icon on the same line */
+  align-items: center; 
+  gap: 8px;           /* Space between word and icon */
+  margin-top: 4px;    /* Slight spacing between line 1 and line 2 */
+}
+
+.get-icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.get-icon {
+  display: flex;            
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;           
+}
+
+.get-icon img {
+  display: block;
+  width: 40px; 
+  height: 40px;
+}
+
 .web-footer {
   color: gray;
-  margin: 40px 60px;
   padding: 20px;
   text-align: center;
 }
@@ -144,23 +190,42 @@ cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 35px;
+  gap: 15px;
+  justify-content: flex-start;
 }
+
+  .proposal strong {
+    display: flex;    /* Changes from block to flex to pull items inline */
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;         /* Space between 'commercial' and 'proposal' */
+  }
+
+  .proposal-button-group {
+    display: flex;
+    margin-top: 0;    /* Remove the mobile top margin */
+    gap: 12px;        /* Space between 'proposal' and the icon */
+  }
+  
+  .proposal {
+    padding-left: 35px; /* Alignment with your desktop grid */
+  }
 
 .web-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 500;
 }
 
 .copyright {
-  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .disclaimer {
-  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 

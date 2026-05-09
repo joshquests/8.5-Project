@@ -107,10 +107,15 @@ header {
 
 .navigation-slider {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
     display: block;
     position: relative;
     padding: 10px 0;
+    scrollbar-width: none;
+}
+
+.navigation-slider::-webkit-scrollbar {
+    display: none; /* Hides scrollbar on Chrome/Edge/Safari */
 }
 
 .nav-slider .swiper-wrapper {
@@ -123,6 +128,7 @@ header {
 
 .navigation-slider .swiper-slide {
     width: auto;
+    flex-shrink: 0;
 }
 
 .show-all-icon, .read-more-btn img {
@@ -236,13 +242,19 @@ header {
   .page-title-desktop {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    justify-content: space-between;
+    gap: 30px;
   }
 
-  .page-title-desktop h1,
-  .menu-desktop {
-    width: 50%;
+  .page-title-desktop h1 {
+    width: auto;
     flex: 1;
+    white-space: normal;
+  }
+
+  .menu-desktop {
+    width: auto;
+    flex-shrink: 0;
   }
 
   .page-title-desktop h1 {

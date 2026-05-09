@@ -105,17 +105,14 @@
   }
 
   .brand-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px 32px;
     max-height: 160px;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.3s ease;
   }
 
   .brand-container.is-expanded,
   .equipment-container.is-expanded {
-    max-height: 2000px;
+    max-height: 1000px;
   }
 
   .brand-slider .swiper-wrapper {
@@ -124,6 +121,7 @@
     gap: 16px 32px;
     transform: none !important; 
     width: 100% !important;
+    height: auto !important;
   }
 
   .brand-card {
@@ -137,6 +135,7 @@
     padding: 0 16px;
     box-sizing: border-box;
     width: auto; 
+    min-width: 0;
     margin: 0 !important;
   }
 
