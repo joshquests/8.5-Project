@@ -1,8 +1,20 @@
+.equipment-container {
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.equipment-slider {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 .equipment-card {
   cursor: pointer;
-  width: auto;
-  min-width: 0;
+  width: 240px;
   height: 160px;
   background: #ffffff;
   border: 1px solid #eaeaea;
@@ -12,7 +24,6 @@
   padding: 0 16px;
   box-sizing: border-box;
   margin: 0 !important;
-  gap: 15px;
 }
 
 .equipment-type {
@@ -38,26 +49,37 @@
 
 @media (min-width: 1024px) {
 
+  .equipment-slider .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    transform: none !important;
+    width: 100% !important;
+  }
 
   .equipment-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px 32px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    max-width: none;
-    margin: 0 auto;
+    display: block;
+    max-height: 160px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0; 
+  }
+
+  .equipment-container.is-expanded {
+    max-height: 1000px; 
+  }
+
+  .expand-button {
+    display: flex; 
   }
 
 .equipment-card {
   position: relative;
   height: 160px;
-  width: 25%;
+  width: 100%;
 }
 
 .equipment-type {
-  padding: 5px;
+  padding: 10px;
 }
 
 .equipment-details {

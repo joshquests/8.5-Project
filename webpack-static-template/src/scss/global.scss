@@ -5,6 +5,8 @@ $text: black;
   font-family: "TTLakes";
   src: url("../fonts/TTLakes-Regular.woff") format("woff"); 
   font-weight: 700;
+  font-style: bold;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -14,15 +16,23 @@ $text: black;
   box-sizing: border-box;
 }
 
-body {
+.webpage {
+  min-width: 1200px; 
+  margin: 0 auto;
+  display: block;
+}
+
+html, body {
   display: flex;
   max-width: 100%; 
   min-height: 100vh;
-  overflow-x: hidden;
   background-color: $bgColor;
   color: $text;
   font-family: "TTLakes", sans-serif;
+  overflow-x: scroll;
 }
+
+ main {background-color: #f8f8f8;}
 
 @media (min-width: 1024px) {
   body {
@@ -30,7 +40,6 @@ body {
     flex-direction: row; 
     width: 100%;
     margin: 0;
-    overflow-x: hidden;
   }
 
   main {

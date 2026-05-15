@@ -159,6 +159,8 @@ main {
     display: block; 
     border: none;
   }
+
+  .menu-btn close {display: none;}
 }
 
 
@@ -182,4 +184,7 @@ main {
 
   .container {box-shadow: none;
   border: none}
+
+    .menu-btn .close {display: none;}
+
 }
